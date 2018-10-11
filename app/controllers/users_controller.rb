@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :authenticate_user, except: [:show, :create]
-  # has_many :stlfiles, :dicomfiles
 
   def show
     user = User.find params[:id]
