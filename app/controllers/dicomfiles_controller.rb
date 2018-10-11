@@ -19,4 +19,5 @@ class DicomfilesController < ApplicationController
 
     def dicomfile_params
         params.require(:dicomfile).permit(:filename, :uploader, :paid)
+    end
 end
