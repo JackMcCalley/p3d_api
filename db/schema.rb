@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_004103) do
     t.boolean "paid", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["user_id"], name: "index_dicomfiles_on_user_id"
   end
 
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_004103) do
     t.boolean "paid", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["user_id"], name: "index_stlfiles_on_user_id"
   end
 
