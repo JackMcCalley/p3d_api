@@ -1,4 +1,4 @@
-class UsersController < ActiveRecord::Base
+class UsersController < ApplicationRecord
   before_action :authenticate_user, except: [:show, :create]
 
   def show
