@@ -1,4 +1,6 @@
-class StlfilesController < ActiveRecord::Base
+class StlfilesController < ApplicationController
+    has_one_attached :stlfile
+    validates :filename, presence: true
     belongs_to :user
 
     def index

@@ -1,4 +1,6 @@
-class DicomfilesController < ActiveRecord::Base
+class DicomfilesController < ApplicationController
+    has_one_attached :dicomfile
+    validates :filename, presence: true
     belongs_to :user
 
     def index
