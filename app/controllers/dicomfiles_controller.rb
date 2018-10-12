@@ -1,5 +1,4 @@
 class DicomfilesController < ApplicationController
-    validates :filename, presence: true
     belongs_to :user
 
     def index
