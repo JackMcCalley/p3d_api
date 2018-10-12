@@ -1,4 +1,4 @@
-class DicomfilesController < ApplicationController
+class DicomfilesController < ApplicationController::Base
     belongs_to :user
 
     def index

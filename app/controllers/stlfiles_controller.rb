@@ -1,4 +1,4 @@
-class StlfilesController < ApplicationController
+class StlfilesController < ApplicationController::Base
     belongs_to :user
 
     def index
