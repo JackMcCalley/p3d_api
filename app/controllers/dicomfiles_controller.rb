@@ -1,4 +1,4 @@
-class DicomfilesController < ApplicationController::Base
+class DicomfilesController < ActiveRecord::Base
     belongs_to :user
 
     def index
