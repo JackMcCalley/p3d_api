@@ -17,4 +17,5 @@ class StlfilesController < ActiveRecord::Base
 
     def stlfile_params
         params.require(:stlfile).permit(:filename, :uploader, :paid)
+    end
 end
