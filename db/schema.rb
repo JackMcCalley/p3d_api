@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_31_233505) do
+ActiveRecord::Schema.define(version: 2018_11_14_215958) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,6 +41,32 @@ ActiveRecord::Schema.define(version: 2018_10_31_233505) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_dicomfiles_on_user_id"
+  end
+
+  create_table "rxforms", force: :cascade do |t|
+    t.text "doctor"
+    t.integer "case"
+    t.text "address"
+    t.text "phone"
+    t.text "patient"
+    t.boolean "toothSupportedGuide"
+    t.boolean "tissueLevelGuide"
+    t.boolean "boneReductionGuide"
+    t.boolean "hasStl"
+    t.boolean "maxillary"
+    t.boolean "mandibular"
+    t.integer "numberOfImplants"
+    t.integer "anchorPins"
+    t.text "implantLocations"
+    t.text "implantSystem"
+    t.text "guidedSurgerySystem"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "serviceType"
+    t.string "comment"
+    t.boolean "boneLevelGuide"
+    t.index ["user_id"], name: "index_rxforms_on_user_id"
   end
 
   create_table "stlfiles", force: :cascade do |t|
