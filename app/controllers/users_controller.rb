@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, except: [:show, :create]
+  before_action :authenticate_user, except: [:show, :create, :user_by_email]
 
   def show
     user = User.find params[:id]
@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     else
       render json: {errors: user.errors}, status: 422
     end
+  end
+
+  def user_by_email
+      email = params[:email]
+      @user = User.where(email: email + ".com")
+      render json: @user, status: 200
   end
 
   private
