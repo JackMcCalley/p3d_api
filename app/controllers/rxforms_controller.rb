@@ -5,7 +5,7 @@ class RxformsController < ApplicationController
     end
 
     def create
-        rxform =Rxform.new(rxform_params)
+        rxform = Rxform.new(rxform_params)
         if rxform.save
             render json: rxform, status: 201
         else
@@ -17,6 +17,12 @@ class RxformsController < ApplicationController
         case_number = params[:case]
         @rxform = Rxform.where(case: case_number)
         render json: @rxform, status: 200
+    end
+
+    def case_submitted_email
+        case_number = params[:case].to_i
+        CaseSubmittedMailer.case_submitted_email(case_number).deliver_now
+        render json: case_number, status: 200
     end
 
     private
