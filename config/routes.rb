@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'user_by_email/:email' => 'users#user_by_email'
 
   get 'case_submitted_email/:case' => 'rxforms#case_submitted_email'
+  get 'lab_email/:case' => 'rxforms#lab_email'
 end

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Hello <%= @user.pluck(:first_name).flatten %>  <%= @user.pluck(:last_name).flatten %> </h2>
+  </body>
+</html>

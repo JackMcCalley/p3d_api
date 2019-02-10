@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Hello P3D Dental Lab,</h2><br/>
+    <p>Files have been sent and are ready for downloading from Dr. <%= @user.pluck(:last_name).flatten %></p><br/>
+    <p>Case Number: <%= @this_case %> </p><br/>
+    <p>Submitter: <%= @user.pluck(:first_name).flatten %> <%= @user.pluck(:last_name).flatten %></p><br/>
+    <p>Contact Email: <%= @user.pluck(:email).flatten %></p>
+  </body>
+</html>
