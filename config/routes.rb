@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   get 'case_submitted_email/:case' => 'rxforms#case_submitted_email'
   get 'lab_email/:case' => 'rxforms#lab_email'
+  get 'alt_src_email/:case' => 'rxforms#alt_src_email'
 end

@@ -4,6 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h2>Hello <%= @user.pluck(:first_name).flatten %>  <%= @user.pluck(:last_name).flatten %> </h2>
+    <h2>Hello Dr. <%= @user[:first_name].to_s %> <%= @user[:last_name].to_s %></h2>
+    <p>We have received the digital files you sent to P3DGuides.com.
+    We will begin manufacturing this case immediately. Thank you for using Precision Digital Dental Designs (P3D).</p>
+    <p>We are committed to making it easy for dentists to order services digitally with a quick turn-around.</p>
   </body>
 </html>
