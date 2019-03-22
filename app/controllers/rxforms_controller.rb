@@ -37,6 +37,18 @@ class RxformsController < ApplicationController
       render json: case_number, status: 200
     end
 
+    def alt_source_lab_email
+      id = params[:id].to_i
+      AltSourceLabMailer.alt_source_lab_email(id).deliver_now
+      render json: id, status: 200
+    end
+
+    def alt_source_dentist_email
+      id = params[:id].to_i
+      AltSourceDentistMailer.alt_source_dentist_email(id).deliver_now
+      render json: id, status: 200
+    end
+
     private
     def rxform_params
         params.require(:rxform).permit(:serviceType, :doctor, :case, :address, :phone, :patient, :toothSupportedGuide, :tissueLevelGuide,

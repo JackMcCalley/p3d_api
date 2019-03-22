@@ -1,6 +1,6 @@
 class AltSrcMailer < ApplicationMailer
-  def alt_src_email(user)
-    @user=User.find(user)
+  def alt_src_email(case_number)
+    @this_case = case_number.to_i
     mail(to: "p3dguides@gmail.com",
       subject: 'P3D Files Received',
       template_path: 'alt_src_mailer',
