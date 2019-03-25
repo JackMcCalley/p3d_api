@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, except: [:show, :create, :user_by_email]
+  before_action :authenticate_user, except: [:show, :create, :user_by_email, :update_user_cart]
 
   def show
     user = User.find params[:id]
@@ -25,6 +25,17 @@ class UsersController < ApplicationController
       email = params[:email]
       @user = User.where(email: email + ".com")
       render json: @user, status: 200
+  end
+
+  def update_user_cart
+    id = params[:id]
+    @cart_id = params{:cart_id}
+    @user = User.find(id)
+    if @user.update_attribute(:cart_id, @cart_id)
+      render json: @user, status: 200
+    else
+      render json: {errors: @user.errors}, status: 422
+    end
   end
 
   private

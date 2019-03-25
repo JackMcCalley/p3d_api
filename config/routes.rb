@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'alt_src_email/:case' => 'rxforms#alt_src_email'
   get 'alt_source_lab_email/:id' => 'rxforms#alt_source_lab_email'
   get 'alt_source_dentist_email/:id' => 'rxforms#alt_source_dentist_email'
+
+  get 'update_user_cart/:id/:cart_id' => 'users#update_user_cart'
 end
