@@ -28,10 +28,10 @@ class UsersController < ApplicationController
   end
 
   def update_user_cart
-    id = params[:id]
-    @cart_id = params{:cart_id}
-    @user = User.find(id)
-    if @user.update_attribute(:cart_id => @cart_id)
+    @id = params[:id]
+    @cart_id = params[:cart_id]
+    @user = User.find(@id)
+    if @user.update_attribute(:cart_id, "#{@cart_id}")
       render json: @user, status: 200
     else
       render json: {errors: @user.errors}, status: 422
