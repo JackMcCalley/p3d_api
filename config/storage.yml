@@ -20,6 +20,13 @@ local:
 #   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
 #   container: your_container_name
 
+amazon:
+  service: S3
+  access_key_id: ""
+  secret_access_key: ""
+  bucket: ""
+  region: ""
+
 # mirror:
 #   service: Mirror
 #   primary: local
