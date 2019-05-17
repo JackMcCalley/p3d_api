@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hello Dr. <%= @user.pluck(:last_name).flatten %>,</h1>
+    <h1>Hello Dr. <%= @user[:last_name].to_s %>,</h1>
     <p>We have received your digital files and provided you with a case number below. If you are still
     using a third party source for uploading additional files (CBCT/.dcm and .stl), please forward this case number to
     your imaging lab so they can link your case with their files using our website.
