@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_29_212029) do
+ActiveRecord::Schema.define(version: 2019_04_19_191027) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -96,6 +96,8 @@ ActiveRecord::Schema.define(version: 2019_03_29_212029) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cart_id"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
   end
 
 end

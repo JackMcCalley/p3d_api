@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :rxforms
   post 'user_token' => 'user_token#create'
   resources :users
+  resources :passwords
 
   get 'rxform_by_case_number/:case' => 'rxforms#rxform_by_case_number'
   get 'user_by_email/:email' => 'users#user_by_email'
@@ -16,4 +17,8 @@ Rails.application.routes.draw do
   patch 'update_user_cart/:id/:cart_id' => 'users#update_user_cart'
 
   get 'return_keys' => 'codes#return_keys'
+
+  post 'password/forgot/:email', to: 'passwords#forgot'
+  post 'password/reset/:password/:token', to: 'passwords#reset'
+
 end
