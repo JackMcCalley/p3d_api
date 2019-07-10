@@ -5,13 +5,19 @@
   </head>
   <body>
     <h1>Hello Dr. <%= @user[:last_name].to_s %>,</h1>
-    <p>We have received your digital files and provided you with a case number below. If you are still
-    using a third party source for uploading additional files (CBCT/.dcm and .stl), please forward this case number to
-    your imaging lab so they can link your case with their files using our website.
-    </p>
-    <p>Thank you for choosing Precision Digital Dental Designs (P3D). We are committed to making it easy
-    for dentists to order services digitally with a quick turn-around.
-    </p>
     <p>Your case number is <%= @this_case %></p>
+    <p>We have received the digital files you sent to P3Dguides.com. If no additional files are to
+      be sent from a third-party source, we will begin treatment planning or manufacturing your case immediately.
+    </p>
+    <p>If you are using a third party source for uploading additional files,
+      please forward this case number to your imaging center so they can link
+      your files using our website. After we receive those files, you will be contacted by P3D, and case planning or manufacturing
+      will begin.
+    </p>
+    <p>
+      Thank you for using Precision Digital Dental Designs (P3D).
+      We look forward to sharing in the excitement that digital technology brings in
+      making dentistry more precise, efficient, and predictable.
+    </p>
   </body>
 </html>
